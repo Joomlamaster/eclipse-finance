@@ -1,0 +1,94 @@
+.htt-header-inner{
+    background:none; 
+}
+.htt-header.eclipse_finance{
+    height: 258px;
+    background: url(/images/howtotrade/1.jpg) no-repeat 50%;
+}
+.htt-header.binary_options{
+    background: url(/images/howtotrade/2.jpg) no-repeat 50%;    
+}
+.htt-header.useful_info{
+    background: url(/images/howtotrade/3.jpg) no-repeat 50%;    
+}
+.htt-header a{
+    display:block; width:100%; height:100%; position:absolute;
+}
+
+
+.accounts ul li {
+    display: block;
+    background: #1e1f23;
+    margin-bottom: 5px;
+    height:43px; 
+    position: relative;
+    min-height: 24px;
+    padding-left:0px;
+}
+.accounts ul li.discovery{
+    background:url(/images/ACC/1.jpg) no-repeat; 
+}
+.accounts ul li.standart{
+    background:url(/images/ACC/2.jpg) no-repeat; 
+}
+.accounts ul li.pro{
+    background:url(/images/ACC/3.jpg) no-repeat; 
+}
+.accounts ul li.excellency{
+    background:url(/images/ACC/4.jpg) no-repeat; 
+}
+.accounts ul li.vip{
+    background:url(/images/ACC/5.jpg) no-repeat; 
+}
+
+
+
+.accounts ul li a{
+    display:block; height:100%; 
+}
+
+.page-row.full-width {
+    height: 294px; 
+}
+
+
+.h-inner.h-top {
+    overflow: inherit;
+}
+
+
+
+
+.auth-form table tr{
+    vertical-align:top; 
+}
+.auth-form table td .acc{
+    position:relative; padding-left:75px; line-height: 19px;
+}
+.auth-form table td .acc img{
+    position:absolute; left:0px; top:0px; 
+}
+.auth-form table td.profile{
+    color:#999999; 
+}
+.auth-form table td.profile a.dropdown-toggle{
+    text-transform: uppercase; color:#FFF; text-decoration:none;    font: 17px "Oswald",sans-serif;
+}
+.auth-form table td.profile .caret {
+    border-top: 4px solid #858585;
+}
+.auth-form table td.balance{
+    font-size: 17px; text-align:center; padding-left:50px;    font-family: "Oswald",sans-serif;
+}
+.auth-form table td.balance span{ 
+    display:block; font-weight: normal; font-size: 21px; font-family:'Oswald', sans-serif; 
+}.drop { background: url("/images/drop-arrow.png") repeat scroll 0 -4px rgba(0, 0, 0, 0) !important; height: 15px; width: 15px; border: 0 none !important;}
+
+.auth-form table td.balance span small{
+    font-size: 14px;
+    position: relative;
+    top: -6px;
+    left:3px;
+}
+
+

@@ -1,0 +1,33 @@
+<?php $this->beginContent('//layouts/column1');?>
+<?php //echo "<pre>";
+//var_dump($this->action->toArray());
+die();
+?>
+<div class="container-head">
+	<div class="heading-inner">
+		<h1 class="heading">Cashier</h1>
+	</div>
+</div>
+<div class="profile-container">
+	<!--  <a href="<?php echo $this->createUrl('/trade/index');?>" class="close"><i class="icon-remove-circle icon-white"></i></a> -->
+	<!--
+	<ul class="nav nav-pills">
+		<li <?php if ($this->id == 'default' && $this->action->id == 'index'):?>class="active";
+<?php endif;
+?>><a href="<?php echo $this->createUrl('default/index');?>">User Profile</a></li>
+		<li <?php if ($this->id == 'default' && $this->action->id == 'login'):?>class="active";
+<?php endif;
+?>><a href="<?php echo $this->createUrl('default/login');?>">Login Options</a></li>
+		<li <?php if ($this->id == 'default' && $this->action->id == 'rates'):?>class="active";
+<?php endif;
+?>><a href="<?php echo $this->createUrl('default/rates');?>">Closed Positions</a></li>
+		<li <?php if ($this->id == 'cashier'):?>class="active";
+<?php endif;
+?>><a href="<?php echo $this->createUrl('cashier/deposit');?>">Cashier</a></li>
+	</ul>
+	-->
+	<div class="profile-content">
+<?php echo $content;?>
+</div>
+</div>
+<?php $this->endContent();?>

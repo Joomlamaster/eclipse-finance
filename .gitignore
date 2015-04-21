@@ -1,0 +1,15 @@
+/assets
+/assets-old
+
+!assets/.gitignore
+protected/runtime/*
+!protected/runtime/.gitignore
+protected/data/*.db
+themes/classic/views/
+
+# Application special files...
+threads/daemonCron.txt
+
+#log files
+/error_log
+/threads/error_log

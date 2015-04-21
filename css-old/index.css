@@ -1,0 +1,773 @@
+body {
+	background: #000
+}
+
+.spriteIndex {
+	background-image: url(/images/spriteIndex.png);
+}
+
+.spriteIndex-account {
+	background-image: url(/images/arrow-gold.png);
+	background-repeat: no-repeat;
+	background-position: 20px 5px;
+}
+
+.form-signin a {
+	color: #1974c8;
+}
+
+.form-signin {
+	width: 314px;
+	position: absolute;
+	right: 0px;
+	top: 60px;
+	margin: 0 auto 20px;
+	background-color: #1e1f23;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+	border: solid 1px #372e1f;
+}
+
+.form-signin .substrate {
+	position: absolute;
+	width: 316px;
+	height: 350px;
+	background: url(/images/main/form-signin-bg.png) no-repeat left top;
+	left: -1px;
+	top: 0px;
+}
+
+.form-signin .form-inner {
+	position: relative;
+	padding: 0px 29px 29px;
+}
+
+.form-signin label {
+	color: #FFF;
+}
+
+.form-signin .btn {
+	width: 100%;
+	text-transform: uppercase;
+}
+
+.form-signin .form-signin-heading {
+	padding: 0px;
+	height: 60px;
+	/* background:#262626 url(/images/form-header-bg.png) repeat-x;*/
+	font-weight: bold;
+	color: #ecc137;
+	line-height: 60px;
+	top: 0px;
+	margin: 0px;
+	font-size: 19px;
+	text-align: center;
+}
+
+.form-signin .form-signin-heading,.form-signin .checkbox {
+	margin-bottom: 10px;
+}
+
+.form-signin input[type="text"],.form-signin input[type="password"] {
+	font-size: 16px;
+	height: auto;
+	margin-bottom: 15px;
+	padding: 7px 9px;
+}
+
+.input-append,.input-prepend {
+	margin-bottom: 0px;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.input-prepend input[type="text"] {
+	height: 20px;
+	padding: 7px 9px;
+	width: 352px;
+}
+
+.input-prepend .add-on {
+	padding: 7px 5px;
+}
+
+.help-block {
+	display: block;
+	margin-bottom: 0px;
+}
+
+.help-block.error {
+	padding-bottom: 12px;
+	position: relative;
+	margin-top: -10px;
+}
+
+.promo {
+	position: absolute;
+	left: 0px;
+	background: #000;
+	width: 530px;
+	height: 350px;
+	color: #FFF;
+	font-size: 25px;
+}
+
+.promo h1 {
+	padding: 10px;
+}
+
+section.main {
+	display: block;
+	margin: 0 auto;
+	height: 480px;
+	background: #000 url(/images/slide.jpg) no-repeat 50% 0;
+	position: relative;
+	overflow: hidden;
+}
+
+section.main .inner.center {
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.content.index {
+	background: #19181d url(/images/main/bgr.jpg) 50% 0px;
+	margin: 20px auto 0px;
+	color: transparent;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	width: auto;
+} /*** main page ******/
+.trade-block {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 647px;
+	height: 255px;
+	background: #1e1f23;
+}
+
+.trade-block .inner {
+	padding: 20px;
+}
+
+.trade-block .graph {
+	float: left;
+	width: 277px;
+	height: 170px;
+	margin-top: 5px;
+}
+
+.trade-block  .trade-choice {
+	float: right;
+	width: 300px;
+	text-align: center;
+}
+
+.trade-block  .trade-choice .progress {
+	height: 23px;
+	line-height: 23px;
+}
+
+.progress-success .bar,.progress .bar-success {
+	background-color: #719937;
+	background-image: -moz-linear-gradient(top, #719937, #507021);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#719937),
+		to(#507021));
+	background-image: -webkit-linear-gradient(top, #719937, #507021);
+	background-image: -o-linear-gradient(top, #719937, #507021);
+	background-image: linear-gradient(to bottom, #719937, #507021);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#719937',
+		endColorstr='#507021', GradientType=0);
+}
+
+.progress-warning .bar,.progress .bar-warning {
+	background-color: #ff4e00;
+	background-image: -moz-linear-gradient(top, #ff4e00, #CC4509);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ff4e00),
+		to(#CC4509));
+	background-image: -webkit-linear-gradient(top, #ff4e00, #CC4509);
+	background-image: -o-linear-gradient(top, #ff4e00, #CC4509);
+	background-image: linear-gradient(to bottom, #ff4e00, #CC4509);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff4e00',
+		endColorstr='#CC4509', GradientType=0);
+}
+
+.trade-block .buttons-row {
+	margin-bottom: 10px;
+	overflow: hidden;
+	margin-top: 10px;
+}
+
+.trade-block .buttons-row div {
+	width: 50%;
+	text-align: center;
+	float: left;
+}
+
+.trade-block .buttons-row a {
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	width: 71px;
+	height: 26px;
+}
+
+.trade-block .buttons-row .above {
+	background-position: 0px 0px;
+}
+
+.trade-block .buttons-row .below {
+	background-position: 0px -31px;
+}
+
+.trade-block  .trade-choice h2 {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 15px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.trade-block select {
+	width: 100%;
+}
+
+.accounts {
+	float: right;
+	width: 317px;
+}
+
+.accounts ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.accounts ul li {
+	display: block;
+	background: #1e1f23;
+	margin-bottom: 5px;
+	padding: 2px 5px 5px 93px;
+	position: relative;
+	min-height: 24px;
+	*height: 72px;
+}
+
+.accounts ul li a {
+	color: #8E8F92;
+	text-decoration: none;
+	font-size: 13px;
+}
+
+.accounts ul li strong {
+	color: #ecc137;
+	font-size: 15px;
+	display: block;
+	padding-bottom: 5px;
+	font-family: 'Oswald', sans-serif;
+	letter-spacing: 0.5px;
+}
+
+.accounts ul li i {
+	display: block;
+	position: absolute;
+	width: 88px;
+	height: 70px;
+	left: 0px;
+}
+
+.accounts ul li.silver i { /*background-position:0px -62px;*/
+	
+}
+
+.accounts ul li.gold i { /*background-position:0px -152px;*/
+	
+}
+
+.accounts ul li.platinum i { /* background-position:0px -236px;*/
+	
+}
+
+.trade-block  .trade-choice .info {
+	position: relative;
+}
+
+.trade-block  .trade-choice .info div {
+	position: absolute;
+	font-size: 18px;
+}
+
+.trade-block  .trade-choice .info div strong {
+	display: block;
+	font-size: 25px;
+	color: #FFF;
+	padding-top: 4px;
+}
+
+.trade-block  .trade-choice .info .option-price {
+	left: 62px;
+	top: 0px;
+}
+
+.trade-block  .trade-choice .info .payout {
+	left: 199px;
+	top: 0px;
+}
+
+.progress {
+	margin: 0px;
+}
+
+.page-row {
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.page-row.main-tables {
+	margin-bottom: 0px;
+	padding-bottom: 50px;
+}
+
+.page-row-inner {
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.page-row.full-width {
+	height: 255px;
+	overflow: hidden;
+	margin: 0px; /* background-color:#383838; */
+	width: auto;
+	padding: 20px 0 20px;
+}
+
+.page-row:after,.progress-values:after {
+	height: 0;
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: "\0020";
+	clear: both;
+}
+
+.col-1-3 {
+	float: left;
+	margin-left: 50px;
+}
+
+.col-1-3 .select-module {
+	float: right;
+}
+
+.clear {
+	clear: left;
+}
+
+.above-bellow-block {
+	background: url(/images/main/trade-choice-bg.png) no-repeat 50% 50%;
+	height: 200px;
+	margin-top: 40px;
+	position: relative;
+}
+
+.above-bellow-block span {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	text-align: center;
+}
+
+.above-bellow-block span.option-price {
+	top: 81px;
+	left: 30px;
+}
+
+.above-bellow-block span.payout {
+	top: 74px;
+	left: 164px;
+	font-size: 24px;
+	line-height: 24px;
+}
+
+.above-bellow-block span strong {
+	display: block;
+}
+
+.above-bellow-block .btn {
+	position: absolute;
+	width: 100%;
+	left: 0px;
+	height: 50px;
+}
+
+.above-bellow-block .btn-success {
+	top: 0px;
+}
+
+.above-bellow-block .btn-success.sprite {
+	background-position: -3px -292px;
+}
+
+.above-bellow-block .btn-warning.sprite {
+	background-position: -3px -366px;
+}
+
+.above-bellow-block .btn-warning {
+	bottom: 0px;
+}
+	/*<section class="select-module">    <div class="inner">        <ul>            <li><a href="#slideOne"></a></li>            <li><a href="#slideTwo"></a></li>            <li><a href="#slideThree"></a></li>        </ul>        <div class="slide-group">            <div class="slide" id="slideOne">1</div>            <div class="slide" id="slideTwo">2</div>            <div class="slide" id="slideThree">3</div>        </div>    </div></section>*/
+section.select-module {
+	width: 325px;
+	height: 276px;
+	background: #FFF;
+	margin-top: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	position: relative;
+}
+
+section.select-module ul {
+	list-style: none;
+	overflow: hidden;
+	margin: 0px;
+	left: 0px;
+	padding: 5px;
+}
+
+section.select-module ul li {
+	float: left;
+	display: block;
+	height: 128px;
+	width: 33.3%;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+section.select-module ul li span {
+	color: #000;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+	padding-top: 80px;
+}
+
+section.select-module ul li.basic span {
+	background: url(/images/main/accaunt-1.png) no-repeat 50% 25px;
+}
+
+section.select-module ul li.partner span {
+	background: url(/images/main/accaunt-2.png) no-repeat 50% 25px;
+}
+
+section.select-module ul li.ultimate span {
+	background: url(/images/main/accaunt-3.png) no-repeat 50% 25px;
+}
+
+section.select-module ul li:hover {
+	background: #fabe69;
+}
+
+section.select-module ul li.active {
+	background: #f9a32a;
+}
+
+section.select-module ul li a {
+	display: block;
+	height: 100%;
+}
+
+section.select-module .slide {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	height: 145px;
+	width: 315px;
+	margin: 5px;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	display: none;
+}
+
+section.select-module .slide .btn {
+	position: absolute;
+	right: 20px;
+	bottom: 5px;
+	background-position: -1px -428px;
+}
+
+section.select-module .slide span {
+	display: block;
+	margin: 20px 20px;
+	padding: 20px;
+}
+
+section.select-module .slide span strong {
+	color: #f9a32a
+}
+
+section.trading {
+	padding-right: 15px;
+}
+
+section.trading select {
+	width: 100%;
+	margin-top: 8px;
+	height: 32px;
+}
+
+.choose-row {
+	overflow: hidden;
+}
+
+.choose-row .choose-row-title { /* padding:30px 0 30px; */
+	text-align: center;
+	color: #ecc137;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+	background: url(/images/main/choose-row-title-bg.png) no-repeat 50% 50%;
+	height: 82px;
+	margin-bottom: 15px;
+}
+
+.choose-row ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	position: relative;
+	width: 1050px;
+	position: relative;
+	left: -50px;
+}
+
+.choose-row ul li {
+	float: left;
+	height: 167px;
+	overflow: hidden;
+	margin-left: 50px;
+}
+
+.choose-row ul li a {
+	display: block;
+	height: 167px;
+	width: 300px;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	position: relative;
+}
+
+.choose-row ul li a i {
+	display: none;
+	height: 100%;
+	width: 100%;
+	background: #000;
+	position: absolute; /* IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	/* IE 5-7 */
+	filter: alpha(opacity = 50); /* Netscape */
+	-moz-opacity: 0.5; /* Safari 1.x */
+	-khtml-opacity: 0.5; /* Good browsers */
+	opacity: 0.5;
+}
+
+.main-tables section {
+	padding: 0px;
+	width: 300px;
+}
+
+.main-tables section table td,table th {
+	padding: 9px 5px;
+	text-align: left;
+}
+
+.main-tables p.title {
+	font-weight: bold;
+	color: #ecc137;
+	font-size: 17px;
+	font-family: 'Oswald', sans-serif;
+	letter-spacing: 1px;
+	line-height: 40px;
+	background-repeat: no-repeat;
+	padding: 5px 0 5px 50px;
+	background-color: #323232;
+	margin: 0px;
+	text-transform: uppercase;
+	position: relative;
+	border: solid #000;
+	border-width: 1px 0 0 0;
+}
+
+.main-tables p.title i {
+	display: block;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 50px;
+	height: 50px;
+}
+
+.main-tables p.title i.trends {
+	background-position: -117px 0px;
+}
+
+.main-tables p.title i.news {
+	background-position: -117px -46px;
+}
+
+.main-tables p.title i.trands {
+	background-position: -117px -87px;
+}
+
+.main-tables section table { /* border-spacing:3px; */
+	width: 100%;
+	height: 300px; /* border-collapse: separate; */
+	border: 0px;
+}
+
+.main-tables section table th {
+	height: 30px;
+	padding: 0px 10px;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+.main-tables section table td,.main-tables section table th {
+	background: #1e1f23;
+	color: #d7d7d7;
+}
+
+.main-tables section table td span {
+	color: #71d31d
+}
+
+.progress-values {
+	font-size: 12px;
+}
+
+.progress-values div {
+	float: left;
+}
+
+.progress-values .left {
+	width: 20%;
+}
+
+.progress-values .center {
+	width: 60%;
+	text-align: center;
+}
+
+.progress-values .right {
+	width: 20%;
+	text-align: right;
+}
+
+.main-tables section table td {
+	
+}
+
+.sprite-icon-trades {background-position
+	
+}
+
+.main-tables ul.news-feed {
+	width: 100%;
+	margin: 0px;
+	list-style: none;
+	height: 296px;
+	overflow: hidden;
+	position: relative;
+}
+
+.main-tables ul.news-feed li {
+	background: #1e1f23;
+	display: block; /* height:65px; */
+	padding: 10px;
+	color: #ecc137;
+}
+
+section.top-trades {
+	padding-right: 0px;
+}
+
+section.top-trades table {
+	font-size: 12px;
+	border-collapse: collapse;
+	border-style: hidden;
+}
+
+section.top-trades table td,section.top-trades table th {
+	border: 1px solid #FFF;
+}
+
+.moving-line {
+	width: 100%;
+	position: absolute;
+	z-index: 9;
+	overflow: hidden;
+	height: 0px;
+	opacity: 0;
+	top: 5px;
+}
+
+.moving-line ul {
+	position: absolute;
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	left: 0px;
+	display: block;
+	width: 9999px;
+}
+
+.moving-line ul li {
+	display: block;
+	float: left;
+	line-height: 25px; /* margin-right:5px; */
+	width: 150px;
+	text-align: center;
+	color: #acabab;
+	border: solid #cfcfcf;
+	border-width: 0 3px 0 0;
+	padding-left: 5px;
+}
+
+.moving-line ul li.normalValue span {
+	color: #949494;
+}
+
+.moving-line ul li.redValue {
+	background: url(/images/arrow-down.png) no-repeat 5px 50%;
+}
+
+.moving-line ul li.redValue span {
+	color: #e38f39;
+}
+
+.moving-line ul li.greenValue {
+	background: url(/images/arrow-up.png) no-repeat 5px 5px;
+}
+
+.moving-line ul li.greenValue span {
+	color: #508934;
+}

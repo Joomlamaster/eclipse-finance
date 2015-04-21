@@ -1,0 +1,44 @@
+
+#accountTypes .accountTable  {display: table; width: 710px; font: 12px Arial; margin-bottom: 40px;}
+#accountTypes .accountTable div {font-size: 14px;}
+#accountTypes .row          {display: table-row;}
+#accountTypes .cell         {display: table-cell; border-bottom: 1px #d9d8d8 solid; border-right: 1px #d9d8d8 solid; padding: 10px; width: 100px;  color: #000; text-align: center; background: #eee;}
+#accountTypes .last         {border-bottom: 1px #d9d8d8 solid;}
+#accountTypes .title        {background:#ededed;  width: 107px; text-align: left;}
+#accountTypes .headerCell   {background:#ededed; display: table-cell; border-bottom: 1px #d9d8d8 solid; border-right: 1px #d9d8d8 solid; border-top: 1px #d9d8d8 solid; padding: 10px; width: 100px;  color: #000; font-size: 15px; text-align: center;}
+#accountTypes .headerCell.first {background: none repeat scroll 0 0 transparent; border-top:none;}
+#accountTypes .cell.last {border-bottom: none;}
+
+
+#accountTypes .cell i {display:block; background: url("../images/v.png")0 0 no-repeat; width: 17px; height: 15px; margin: 0 auto; }
+
+#accountTypes .headerCell span {position:relative; left:5px; top:2px; background: url("../images/stars.png")0 0 no-repeat; width: 16px; height: 16px; display: inline-block;}
+#accountTypes .headerCell span.silverStar {background-position: -20px 0;}
+#accountTypes .headerCell span.goldStar {background-position: -40px 0;}
+#accountTypes .headerCell span.platinumStar {background-position: -60px 0;}
+#accountTypes .headerCell span.vipStar {background-position: -80px 0;}
+
+#accountTypes .accountTypeCell { width: 116px; height: 98px; font-size:17px; background: url("../images/types.png") 0 0 no-repeat; padding: 0; text-align: center; }
+#accountTypes .accountTypeCell span {display:block;font-size: 27px; font-weight: bold; padding:8px 0 6px; text-shadow: 1px 1px 5px #ffffff; filter: dropshadow(color=#ffffff, offx=1, offy=1);}
+#accountTypes .standard { }
+#accountTypes .silver{background-position:-117px 0;}
+#accountTypes .gold {background-position:-234px 0;}
+#accountTypes .platinum { background-position:-351px 0;}
+#accountTypes .vip {background-position:-468px 0;}
+
+#accountTypes .joinTypeCell { width: 116px; height: 41px; font-size:17px; background: url("../images/types.png") 0 0 no-repeat; padding: 0; text-align: center; font-weight: bold;}
+#accountTypes .joinTypeCell a {font-size: 17px; color: #ffffff; font-weight: bold; line-height: 36px; text-shadow: 1px 1px 1px #949494; filter: dropshadow(color=#949494, offx=1, offy=1); text-decoration: underline;}
+#accountTypes .standardBtn { background-position:0 -108px; }
+#accountTypes .silverBtn { background-position:-117px -108px; }
+#accountTypes .goldBtn  { background-position:-234px -108px;}
+#accountTypes .platinumBtn { background-position:-351px -108px;  }
+#accountTypes .vipBtn { background-position:-468px -108px; }
+
+#accountTypes.RU .headerCell span {display: block; margin: 0 auto;}
+#accountTypes.RU .joinTypeCell a {font-size: 14px;  }
+
+#accountTypes.AR .headerCell span {left:auto; right:5px;}
+#accountTypes.AR .headerCell  {border-right:none; border-left:1px #d9d8d8 solid;}
+#accountTypes.AR .cell  {border-right:none; border-left:1px #d9d8d8 solid;}
+
+#accountTypes.DE .joinTypeCell a {font-size: 15px; line-height: 16px; position: relative; top:2px;}

@@ -1,0 +1,66 @@
+object(SimpleXMLElement)#56 (10) {
+  ["ConfirmationNumber"]=>
+  string(1) "0"
+  ["TransactionId"]=>
+  string(8) "11831141"
+  ["MerchantId"]=>
+  string(9) "100000403"
+  ["TerminalId"]=>
+  string(8) "10000740"
+  ["CurrencyCode"]=>
+  string(3) "USD"
+  ["TotalAmount"]=>
+  string(4) "1100"
+  ["PaymentStatus"]=>
+  string(5) "Error"
+  ["Code"]=>
+  string(4) "1080"
+  ["Description"]=>
+  string(53) "You have used your daily transaction attempts by card"
+  ["TxnTime"]=>
+  string(19) "2014-10-08 12:22:13"
+}
+object(SimpleXMLElement)#56 (10) {
+  ["ConfirmationNumber"]=>
+  string(20) "lpr20141008130305503"
+  ["TransactionId"]=>
+  string(8) "11314538"
+  ["MerchantId"]=>
+  string(9) "100000403"
+  ["TerminalId"]=>
+  string(8) "10000740"
+  ["CurrencyCode"]=>
+  string(3) "USD"
+  ["TotalAmount"]=>
+  string(4) "1100"
+  ["PaymentStatus"]=>
+  string(8) "APPROVED"
+  ["Code"]=>
+  string(4) "1001"
+  ["Description"]=>
+  string(20) "Successful operation"
+  ["TxnTime"]=>
+  string(19) "2014-10-08 13:03:25"
+}
+object(SimpleXMLElement)#56 (10) {
+  ["ConfirmationNumber"]=>
+  string(20) "lpr20141008150451540"
+  ["TransactionId"]=>
+  string(8) "11448115"
+  ["MerchantId"]=>
+  string(9) "100000403"
+  ["TerminalId"]=>
+  string(8) "10000740"
+  ["CurrencyCode"]=>
+  string(3) "USD"
+  ["TotalAmount"]=>
+  string(4) "1300"
+  ["PaymentStatus"]=>
+  string(8) "APPROVED"
+  ["Code"]=>
+  string(4) "1001"
+  ["Description"]=>
+  string(20) "Successful operation"
+  ["TxnTime"]=>
+  string(19) "2014-10-08 15:05:09"
+}

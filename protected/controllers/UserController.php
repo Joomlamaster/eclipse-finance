@@ -1,0 +1,191 @@
+<?php
+
+class UserController extends SiteController
+{
+	public $layout = '//layouts/column1';
+	
+	public $pages=array();
+	public $section;
+	public $page;
+		
+	public function actionIndex()
+	{
+		//$this->render('index');
+	}
+	
+	public function actions(){
+		return array(
+				'captcha'=>array(
+						'class'=>'CCaptchaAction',
+				),
+		);
+	}	
+	
+	function beforeAction($action)
+	{ 
+		if(!Yii::app()->user->isGuest && in_array($action->id, array('login', 'registration')))
+		{
+			$this->redirect('/');
+		}
+		$this->pages = Pages::model()->getPagesTree();
+		
+		return parent::beforeAction($action);
+	}
+	
+	function actionGetBalance() 
+	{
+		echo Yii::app()->user->balance;  
+	}
+		
+	function actionLogin()
+	{	
+		$model=new LoginForm;
+		// if it is ajax validation request
+		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+		{
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
+		}
+		
+		// collect user input data
+		if(isset($_POST['LoginForm']))
+		{
+			$model->attributes=$_POST['LoginForm'];
+			// validate user input and redirect to the previous page if valid
+			if($model->validate())
+			{
+				if($model->login())
+				{
+					$this->redirect(Yii::app()->user->returnUrl);
+				}
+				else
+					Core::app()->user->setFlash('error', 'Вы ввели неверные данные');
+			}
+		}
+		// display the login form
+		$this->pageTitle = 'Login'; 
+		$this->render('login',array('model'=>$model));		
+	}
+	
+	function actionRegistration()
+	{
+		$model = new Users('registration'); 
+		
+		if(isset($_POST['Users']))
+		{
+			$model->attributes = $_POST['Users'];  
+			//$model->scan = CUploadedFile::getInstance($model,'scan');
+			if(!isset($_POST['step1']) && $model->validate())
+			{
+				$model->role = 'user';
+				$model->partner_id = Yii::app()->user->getState('partner_id');
+				
+				$model->url_referrer = Yii::app()->user->getState('url_referrer');
+				if($model->save())
+				{
+					
+					$mail = new YiiMailer();
+					$mail->setView('welcome');
+					$mail->setData(array('first_name' => $model->first_name, 'email' => $model->user_email, 'password' => $_POST['Users']['user_password']));
+					$mail->setFrom("support@eclipse-finance.com", 'Eclipse Finance');
+					$mail->setTo($model->user_email);
+					$mail->setSubject('Eclipse Finance');
+					$mail->send();					
+					
+					//$model->scan->saveAs('uploads/scans/'.$model->scan);
+					Yii::app()->user->setState('user_new', 1);
+					$identity=new UserIdentity($model->user_email,$model->password_plain);
+					$identity->authenticate();
+					Yii::app()->user->login($identity);
+					
+					//Yii::app()->user->setFlash('success', 'Поздравляем! Вы успешно зарегистрированы в системе');
+					$this->redirect('/user/invest');
+				}
+			} else unset($_POST['step1']); 
+		} 
+		$this->pageTitle = 'Open Account';
+		$this->render('registration',compact('model'));
+	}
+	
+	function actionInvest()
+	{
+		$this->render('invest');
+	}
+	
+	function actionPassword_recovery()
+	{
+		$model = new Users('recovery'); 
+		$user_recovery_key = isset($_GET['user_recovery_key']) ? $_GET['user_recovery_key'] : null;
+		if($user_recovery_key)
+		{
+			$user = Users::model()->find('user_recovery_key=:user_recovery_key', array(':user_recovery_key' => CHtml::encode($user_recovery_key))); 
+			if($user)
+			{
+				if(isset($_POST['Users']))
+				{
+					$model->attributes = $_POST['Users']; 
+					if($model->validate(array('user_password_new', 'user_password_repeat')))
+					{ 
+						$user->user_recovery_key = md5(time().$model->user_password);
+						$user->user_password = CPasswordHelper::hashPassword($model->user_password_new);
+						if($user->save(false))
+						{
+							Yii::app()->user->setFlash('success', 'Success');
+							$this->redirect($this->createUrl('user/login'));
+						}
+						else
+							Yii::app()->user->setFlash('error', 'error');
+					}				
+				}	
+			}
+			else
+				throw new CHttpException(404,'page no fount');
+			
+			$this->layout = '//layouts/main';
+			$this->pageTitle = 'Recovery';
+			$this->render('new_pass_form', compact('model')); 
+		}
+		else
+		{
+			if(isset($_POST['Users']))
+			{
+				$model->attributes = $_POST['Users']; 
+				if($model->validate(array('user_email')))
+				{ 
+					$user = Users::model()->find('user_email=:user_email', array(':user_email' => CHtml::encode($model->user_email))); 
+					if($user)
+					{  
+						$user->user_recovery_key = md5(time().$model->user_email);
+						$user->save(false);
+						
+					 	$activation_url = 'http://' . $_SERVER['HTTP_HOST'].$this->createUrl('user/password_recovery',array("user_recovery_key" => $user->user_recovery_key));
+						
+					 	$mail = new YiiMailer();
+					 	$mail->setFrom(Yii::app()->params['adminEmail'], 'Admin');
+					 	$mail->setTo($user->user_email);
+					 	$mail->setSubject('Password recovery');
+					 	$mail->setBody($activation_url);
+					 	$mail->send();
+					 	
+					 	Yii::app()->user->setFlash('success', 'Check your email.');
+						$this->refresh();	
+					}
+				}
+			}
+			$this->layout = '//layouts/main';
+			$this->render('password_recovery', compact('model')); 
+		}
+	}
+	
+	
+	function actionLogout()
+	{
+		Yii::app()->user->logout();
+		Yii::app()->user->clearStates();
+		Yii::app()->request->cookies->clear();
+		
+		$this->redirect(Yii::app()->homeUrl);		
+	}	
+	
+	
+}

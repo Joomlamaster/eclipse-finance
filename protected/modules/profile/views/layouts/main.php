@@ -1,0 +1,38 @@
+<?php $this->beginContent('//layouts/column1'); ?>
+<?php //echo "<pre>";
+//var_dump($this->action->toArray()); die();?>
+<?php 
+$url = Yii::app()->request->requestUri;
+$page = substr($url, strrpos($url, '/') + 1);
+?>
+<div class="container-head">
+	<div class="heading-inner">
+		<?php if($page == 'deposit' || $page == 'withdrawal_history' || $page == 'transactions_deposit' || $page == 'withdraw' || $page == 'transactions_bonus' || $page == 'transactions_deduction') { ?>
+			<h1 class="heading">Cashier</h1>
+		<?php } ?>
+		<?php if($page == 'index' || $page == 'profile') { ?>
+			<h1 class="heading profile">Personal Information</h1>
+		<?php } ?>
+		<?php if($page == 'login') { ?>
+			<h1 class="heading login">Change Password</h1>
+		<?php } ?>
+		<?php if($page == 'rates') { ?>
+			<h1 class="heading invest">Investment History</h1>
+		<?php } ?>
+	</div>
+</div>
+<div class="profile-container">
+	<!--  <a href="<?php echo $this->createUrl('/trade/index'); ?>" class="close"><i class="icon-remove-circle icon-white"></i></a> -->
+	<!--  
+	<ul class="nav nav-pills">
+		<li <?php if($this->id == 'default' && $this->action->id == 'index'): ?>class="active";<?php endif; ?>><a href="<?php echo $this->createUrl('default/index'); ?>">User Profile</a></li>
+		<li <?php if($this->id == 'default' && $this->action->id == 'login'): ?>class="active";<?php endif; ?>><a href="<?php echo $this->createUrl('default/login'); ?>">Login Options</a></li>
+		<li <?php if($this->id == 'default' && $this->action->id == 'rates'): ?>class="active";<?php endif; ?>><a href="<?php echo $this->createUrl('default/rates'); ?>">Closed Positions</a></li>
+		<li <?php if($this->id == 'cashier'): ?>class="active";<?php endif; ?>><a href="<?php echo $this->createUrl('cashier/deposit'); ?>">Cashier</a></li>
+	</ul>
+	-->	
+	<div class="profile-content">
+		<?php echo $content; ?>
+	</div>
+</div>
+<?php $this->endContent();?>

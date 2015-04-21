@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
+<style>
+/*Now the styles*/
+* {
+	margin: 0; 
+	padding: 0;
+}
+
+.content.index { color: transparent; }
+
+/*Time to apply widths for accordian to work
+Width of image = 640px
+total images = 3
+so width of hovered image = 640px
+width of un-hovered image = 40px - you can set this to anything
+so total container width = 640 + 40*4 = 800px;
+default width = 800/5 = 160px;
+*/
+
+.accordian {
+	width: 1000px; height: 105px;
+	overflow: hidden;
+	border: 0 none;
+}
+
+/*A small hack to prevent flickering on some browsers*/
+.accordian ul {
+	width: 2000px;
+	/*This will give ample space to the last item to move
+	instead of falling down/flickering during hovers.*/
+	font-family: 'Roboto', sans-serif;
+}
+
+.accordian li {
+	position: relative;
+	display: block;
+	width: 330px;
+	float: left;
+	
+	border-left: 1px solid #888;
+
+	/*Transitions to give animation effect*/
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	/*If you hover on the images now you should be able to 
+	see the basic accordian*/
+}
+
+/*Reduce with of un-hovered elements*/
+.accordian ul:hover li {width: 250px;}
+/*Lets apply hover effects now*/
+/*The LI hover style should override the UL hover style*/
+.accordian ul li:hover {width: 640px;}
+
+
+.accordian li img {
+	display: block;
+}
+
+/*Image title styles*/
+.image_title {
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	left: 0; bottom: 0;	
+width: 640px;	
+
+
+}
+.image_title a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	padding: 20px;
+	font-size: 16px;
+	margin-top:-260px;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.image_title a:hover { height: 105px;  margin-top: -330px; }
+</style>
+</head>
+
+<body>
+<div class="accordian">
+	<ul>
+		<li>
+			<div class="image_title">
+				<a href="#"><span style="font-size: 20px;">1.</span> Choose an Asset<br/>
+<p style="margin-top: 7px;">Pick an assent from a variety of currencies, commodities, indices, stocks</p>
+</a>
+			</div>
+			<a href="#">
+				<img src="../images/asset.png"/>
+			</a>
+		</li>
+		<li>
+			<div class="image_title">
+				<a href="#"><span style="font-size: 20px;">2.</span> Choose an Direction<br/>
+<p style="margin-top: 7px;">Predict if the price of an asset will go above or below by the expiration of the contract</p>
+			</div>
+						<a href="#">
+				<img src="../images/direction.png"/>
+			</a>
+		</li>
+		<li>
+			<div class="image_title">
+				<a href="#"><span style="font-size: 20px;">3.</span> Enter Investment Amount<br/>
+<p style="margin-top: 7px;">Enter the amount of money you would like to invest</p>
+			</div>
+			<a href="#">
+				<img src="../images/investing.png"/>
+			</a>
+		</li>
+
+	</ul>
+</div>
+
+</body>
+</html>
